@@ -1,0 +1,7 @@
+web\service\UserService.class
+web\config\AppConfig.class
+web\config\WebConfig.class
+web\config\WebAppInitialiser.class
+web\controller\UserController.class
+web\dao\UserDao.class
+web\model\User.class
