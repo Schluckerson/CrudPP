@@ -18,27 +18,27 @@ public class UserService {
     }
 
     @Transactional
-    public void createUsersTable() {
-        dao.createUsersTable();
+    public void saveUser(User user) {
+        dao.saveUser(user);
     }
+
     @Transactional
-    public void dropUsersTable() {
-        dao.dropUsersTable();
+    public void deleteUserById(int id) {
+        dao.deleteUserById(id);
     }
+
     @Transactional
-    public void saveUser() {
-        dao.saveUser();
+    public User getUserById(int id) {
+        return dao.getUserById(id);
     }
+
     @Transactional
-    public void removeUserById() {
-        dao.removeUserById();
+    public void updateUser(User user, int id) {
+        dao.updateUser(user, id);
     }
+
     @Transactional(readOnly = true)
     public List<User> getAllUsers () {
         return dao.getAllUsers();
-    }
-    @Transactional
-    public void cleanUsersTable() {
-        dao.cleanUsersTable();
     }
 }
